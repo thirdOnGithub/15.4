@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521FA3222B5EB04800CDFCF0 /* CalculationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */; };
 		52D71B3F2B5C737800264E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D71B3E2B5C737800264E19 /* AppDelegate.swift */; };
 		52D71B412B5C737800264E19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D71B402B5C737800264E19 /* SceneDelegate.swift */; };
 		52D71B432B5C737800264E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D71B422B5C737800264E19 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationListViewController.swift; sourceTree = "<group>"; };
 		52D71B3B2B5C737800264E19 /* TinkoffCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D71B3E2B5C737800264E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52D71B402B5C737800264E19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				52D71B472B5C737B00264E19 /* Assets.xcassets */,
 				52D71B492B5C737B00264E19 /* LaunchScreen.storyboard */,
 				52D71B4C2B5C737B00264E19 /* Info.plist */,
+				521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */,
 			);
 			path = TinkoffCalculator;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521FA3222B5EB04800CDFCF0 /* CalculationListViewController.swift in Sources */,
 				52D71B432B5C737800264E19 /* ViewController.swift in Sources */,
 				52D71B3F2B5C737800264E19 /* AppDelegate.swift in Sources */,
 				52D71B412B5C737800264E19 /* SceneDelegate.swift in Sources */,

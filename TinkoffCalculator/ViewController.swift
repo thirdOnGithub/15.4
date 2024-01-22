@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelText: UILabel!
     
+    
     @IBAction func buttonPrassed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else{return}
         if labelText.text?.contains(".") == true && buttonText == "."{return}
@@ -58,7 +59,8 @@ class ViewController: UIViewController {
         calculationHistory.removeAll()
         defaultTextLabel()
     }
-     
+    
+    
     var calculationHistory:[CalculationItem] = []
     
     enum Operation: String {
@@ -133,6 +135,35 @@ class ViewController: UIViewController {
 
     func defaultTextLabel() {
         labelText.text = "0"
+    }
+    
+    
+// Навигация
+//    Сегвеии
+    @IBAction func unwindAction (inwindSeque: UIStoryboardSegue){
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "CALCULATION_LIST",
+              let calculationListVC = segue.destination as? CalculationListViewController else {return}
+        calculationListVC.result  = labelText.text
+    }
+    
+    
+//    Навигация через код
+    
+     
+    @IBAction func showCalculateList(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let calculateLicVC = sb.instantiateViewController(withIdentifier: "CalculationListController")
+        
+        if let secondVC = calculateLicVC as? CalculationListViewController {
+            secondVC.result = labelText.text
+        }
+        
+        show(calculateLicVC, sender: self)
+        
     }
 }
 
