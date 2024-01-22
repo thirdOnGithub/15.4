@@ -3,4 +3,242 @@
    uuid = "6AFC2960-F6FB-4788-B1DB-114724AD6434"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB8D8F18-7DAE-4E3B-94DB-2E8DA0DBB734"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinkoffCalculator/History/CalculationListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49206AB1-11B5-4989-A368-288392B1F1C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinkoffCalculator/History/CalculationListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinkoffCalculator/History/CalculationListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CalculationListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0 - 468d3b81d45546d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.CalculationListViewController.calculations.getter : Swift.Array&lt;(expression: Swift.Array&lt;TinkoffCalculator.ViewController.CalculationItem&gt;, result: Swift.Double)&gt;"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/History/CalculationListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0 - 468d3b81d45544e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.CalculationListViewController.calculations.setter : Swift.Array&lt;(expression: Swift.Array&lt;TinkoffCalculator.ViewController.CalculationItem&gt;, result: Swift.Double)&gt;"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/History/CalculationListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0 - 468d3b81d45544e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.CalculationListViewController.calculations.modify : Swift.Array&lt;(expression: Swift.Array&lt;TinkoffCalculator.ViewController.CalculationItem&gt;, result: Swift.Double)&gt;"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/History/CalculationListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0 - 95c1043138a600fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.CalculationListViewController.calculations.modify : Swift.Array&lt;(expression: Swift.Array&lt;TinkoffCalculator.ViewController.CalculationItem&gt;, result: Swift.Double)&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0 - 2ad42b2150fc4cfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.CalculationListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TinkoffCalculator.CalculationListViewController"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/History/CalculationListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "2EC93DBF-6776-4D00-B78E-7F582C6F41E0 - 1836bde29858a243"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.CalculationListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TinkoffCalculator.CalculationListViewController&gt;"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/History/CalculationListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B130EB9-022B-4828-AEE9-3F3EA160CB2C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinkoffCalculator/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "showCalculateList(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8B130EB9-022B-4828-AEE9-3F3EA160CB2C - 70c854ee76e0cb06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.ViewController.showCalculateList(Any) -&gt; ()"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "8B130EB9-022B-4828-AEE9-3F3EA160CB2C - 70c854ee76e0cb06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.ViewController.showCalculateList(Any) -&gt; ()"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "404">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BACBD2FD-21CE-486D-8C39-9708156F3B43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TinkoffCalculator/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "showCalculateList(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BACBD2FD-21CE-486D-8C39-9708156F3B43 - 70c854ee76e0cb82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.ViewController.showCalculateList(Any) -&gt; ()"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "BACBD2FD-21CE-486D-8C39-9708156F3B43 - 70c854ee76e0cba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TinkoffCalculator.ViewController.showCalculateList(Any) -&gt; ()"
+                  moduleName = "TinkoffCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/swift/TinkoffCalculator/TinkoffCalculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

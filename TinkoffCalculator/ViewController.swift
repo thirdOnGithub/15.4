@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var labelText: UILabel!
-    
+    var calculations:[(expression: [CalculationItem], result: Double)] = []
     
     @IBAction func buttonPrassed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else{return}
@@ -51,6 +51,7 @@ class ViewController: UIViewController {
             calculationHistory.append(.numeber(number))
             let result = try calculate()
             labelText.text = numberFormater.string(from: NSNumber(value: result))
+            calculations.append((calculationHistory,result))
         } catch {
             labelText.text = "Error"
         }
@@ -140,26 +141,26 @@ class ViewController: UIViewController {
     
 // Навигация
 //    Сегвеии
-    @IBAction func unwindAction (inwindSeque: UIStoryboardSegue){
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "CALCULATION_LIST",
-              let calculationListVC = segue.destination as? CalculationListViewController else {return}
-        calculationListVC.result  = labelText.text
-    }
+//    @IBAction func unwindAction (inwindSeque: UIStoryboardSegue){
+//        
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard segue.identifier == "CALCULATION_LIST",
+//              let calculationListVC = segue.destination as? CalculationListViewController else {return}
+//        calculationListVC.result  = labelText.text
+//    }
     
     
 //    Навигация через код
     
      
-    @IBAction func showCalculateList(_ sender: UIButton) {
+    @IBAction func showCalculateList(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let calculateLicVC = sb.instantiateViewController(withIdentifier: "CalculationListController")
         
         if let secondVC = calculateLicVC as? CalculationListViewController {
-            secondVC.result = labelText.text
+            secondVC.calculations = calculations
         }
         
         show(calculateLicVC, sender: self)
