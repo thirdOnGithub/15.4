@@ -154,8 +154,8 @@
             filePath = "TinkoffCalculator/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "showCalculateList(_:)"
             landmarkType = "7">
             <Locations>
@@ -202,8 +202,8 @@
             filePath = "TinkoffCalculator/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "showCalculateList(_:)"
             landmarkType = "7">
             <Locations>

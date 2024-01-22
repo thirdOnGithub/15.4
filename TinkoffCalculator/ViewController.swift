@@ -8,9 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var labelText: UILabel!
-    var calculations:[(expression: [CalculationItem], result: Double)] = []
+    var calculations:[Calculation] = []
+    let calculationHistoryStorage = CalculationHistoryStorage()
+    
     
     @IBAction func buttonPrassed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else{return}
@@ -51,7 +55,9 @@ class ViewController: UIViewController {
             calculationHistory.append(.numeber(number))
             let result = try calculate()
             labelText.text = numberFormater.string(from: NSNumber(value: result))
-            calculations.append((calculationHistory,result))
+            let newCalculation = Calculation(expression: calculationHistory, result: result)
+            calculations.append(newCalculation)
+            calculationHistoryStorage.setHistory(calculation: calculations)
         } catch {
             labelText.text = "Error"
         }
@@ -64,7 +70,7 @@ class ViewController: UIViewController {
     
     var calculationHistory:[CalculationItem] = []
     
-    enum Operation: String {
+    enum Operation: String, Codable {
         case add = "+"
         case substract = "-"
         case multiply  = "x"
@@ -87,7 +93,7 @@ class ViewController: UIViewController {
         
     }
     
-    enum CalculationItem{
+    enum CalculationItem: Codable{
         case numeber(Double)
         case operation(Operation)
     }
@@ -112,6 +118,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         defaultTextLabel()
+        
+        calculations = calculationHistoryStorage.loadHistory()
     }
 
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521DBB1B2B5F1A310007EBDF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DBB1A2B5F1A310007EBDF /* Storage.swift */; };
 		521FA3222B5EB04800CDFCF0 /* CalculationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */; };
 		52CC906E2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC906D2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift */; };
 		52CC90702B5ED6D100A9C8C6 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CC906F2B5ED6D100A9C8C6 /* HistoryTableViewCell.xib */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521DBB1A2B5F1A310007EBDF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationListViewController.swift; sourceTree = "<group>"; };
 		52CC906D2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		52CC906F2B5ED6D100A9C8C6 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521DBB192B5F1A180007EBDF /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				521DBB1A2B5F1A310007EBDF /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		52CC906C2B5ED59F00A9C8C6 /* History */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		52D71B3D2B5C737800264E19 /* TinkoffCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				521DBB192B5F1A180007EBDF /* Storage */,
 				52CC906C2B5ED59F00A9C8C6 /* History */,
 				52D71B3E2B5C737800264E19 /* AppDelegate.swift */,
 				52D71B402B5C737800264E19 /* SceneDelegate.swift */,
@@ -281,6 +292,7 @@
 				52D71B3F2B5C737800264E19 /* AppDelegate.swift in Sources */,
 				52D71B412B5C737800264E19 /* SceneDelegate.swift in Sources */,
 				52CC906E2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift in Sources */,
+				521DBB1B2B5F1A310007EBDF /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

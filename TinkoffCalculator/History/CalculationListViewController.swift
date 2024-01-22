@@ -12,7 +12,7 @@ class CalculationListViewController: UIViewController{
     @IBOutlet weak var calculationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var calculations:[(expression: [ViewController.CalculationItem], result: Double)] = []
+    var calculations:[Calculation] = []
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -61,7 +61,7 @@ class CalculationListViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationItem.titleView = "История"
+//        navigationController?.navigationItem.titleView = "История"
         
 //        navigationController?.navigationItem.rightBarButtonItem?.title = ""
 //        navigationController?.setNavigationBarHidden(true, animated: false)
