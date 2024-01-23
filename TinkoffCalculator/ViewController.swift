@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         guard let buttonText = sender.currentTitle else{return}
         if labelText.text?.contains(".") == true && buttonText == "."{return}
         
+        print(buttonText)
         if labelText.text == "0"{
             labelText.text = buttonText
         } else {
