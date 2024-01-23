@@ -14,6 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelText: UILabel!
     var calculations:[Calculation] = []
     let calculationHistoryStorage = CalculationHistoryStorage()
+    private let alertView: AlertView = {
+        let screenBounds = UIScreen.main.bounds
+        let alertHeight: CGFloat = 100
+        let alertWight = screenBounds.width - 40
+        let x:CGFloat = screenBounds.width/2 - alertWight/2
+        let y:CGFloat = screenBounds.height/2 - alertHeight/2
+        let alertFrame = CGRect(x: x, y: y, width: alertWight, height: alertHeight)
+        let alertView = AlertView(frame: alertFrame)
+        return alertView
+    }()
     
     
     @IBAction func buttonPrassed(_ sender: UIButton) {
@@ -26,6 +36,11 @@ class ViewController: UIViewController {
             labelText.text?.append(buttonText)
         }
         
+        if labelText.text == "3.141592"{
+            animateAlert()
+        }
+        
+        sender.animateTap()
         
         
     }
@@ -60,6 +75,7 @@ class ViewController: UIViewController {
             calculationHistoryStorage.setHistory(calculation: calculations)
         } catch {
             labelText.text = "Error"
+            labelText.shake()
         }
     }
     @IBAction func buttonClear(_ sender: UIButton) {
@@ -120,6 +136,14 @@ class ViewController: UIViewController {
         defaultTextLabel()
         
         calculations = calculationHistoryStorage.loadHistory()
+        view.addSubview(alertView)
+        alertView.alpha = 0
+        alertView.alertText = "Вы нашли пасхалку!"
+        view.subviews.forEach {
+            if type(of: $0)  == UIButton.self {
+                $0.layer.cornerRadius = 0
+            }
+        }
     }
 
     
@@ -173,6 +197,50 @@ class ViewController: UIViewController {
         
         show(calculateLicVC, sender: self)
         
+    }
+    
+    func animateAlert(){
+        UIView.animate(withDuration: 0.5) {
+            self.alertView.alpha = 1
+        } completion: { (_) in
+            UIView.animate(withDuration: 0.5) {
+                var newCenter = self.labelText.center
+                newCenter.y -= self.alertView.bounds.height
+                self.alertView.center = newCenter
+            }
+        }
+    }
+}
+
+extension UILabel {
+    func shake(){
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.5
+        animation.repeatCount = 5
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: center.x - 5, y: center.y ))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: center.x + 5, y: center.y ))
+        
+        layer.add(animation, forKey: "position")
+    }
+}
+
+
+extension UIButton {
+    func animateTap(){
+        let scaleAnimation  = CAKeyframeAnimation(keyPath: "tranform.scale")
+        scaleAnimation.values = [1,0.9,1]
+        scaleAnimation.keyTimes = [0,0.2,1]
+        
+        let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        opacityAnimation.values = [0.4, 0.8, 1]
+        opacityAnimation.keyTimes = [0, 0.2, 1]
+        
+        let animationGroup =  CAAnimationGroup()
+        animationGroup.duration  = 1.5
+        animationGroup.animations = [scaleAnimation, opacityAnimation]
+        
+        layer.add(animationGroup, forKey: "groupAnimation")
     }
 }
 

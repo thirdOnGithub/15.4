@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		521DBB1B2B5F1A310007EBDF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DBB1A2B5F1A310007EBDF /* Storage.swift */; };
+		521DBB1D2B5F30A90007EBDF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DBB1C2B5F30A90007EBDF /* AlertView.swift */; };
 		521FA3222B5EB04800CDFCF0 /* CalculationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */; };
 		52CC906E2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC906D2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift */; };
 		52CC90702B5ED6D100A9C8C6 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CC906F2B5ED6D100A9C8C6 /* HistoryTableViewCell.xib */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		521DBB1A2B5F1A310007EBDF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		521DBB1C2B5F30A90007EBDF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		521FA3212B5EB04800CDFCF0 /* CalculationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationListViewController.swift; sourceTree = "<group>"; };
 		52CC906D2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		52CC906F2B5ED6D100A9C8C6 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				52D71B472B5C737B00264E19 /* Assets.xcassets */,
 				52D71B492B5C737B00264E19 /* LaunchScreen.storyboard */,
 				52D71B4C2B5C737B00264E19 /* Info.plist */,
+				521DBB1C2B5F30A90007EBDF /* AlertView.swift */,
 			);
 			path = TinkoffCalculator;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				521FA3222B5EB04800CDFCF0 /* CalculationListViewController.swift in Sources */,
 				52D71B432B5C737800264E19 /* ViewController.swift in Sources */,
+				521DBB1D2B5F30A90007EBDF /* AlertView.swift in Sources */,
 				52D71B3F2B5C737800264E19 /* AppDelegate.swift in Sources */,
 				52D71B412B5C737800264E19 /* SceneDelegate.swift in Sources */,
 				52CC906E2B5ED5D400A9C8C6 /* HistoryTableViewCell.swift in Sources */,
