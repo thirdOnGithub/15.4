@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }()
     
     
+    
     @IBAction func buttonPrassed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else{return}
         if labelText.text?.contains(".") == true && buttonText == "."{return}
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
         } else {
             labelText.text?.append(buttonText)
         }
-        
+    
         if labelText.text == "3.141592"{
             animateAlert()
         }
