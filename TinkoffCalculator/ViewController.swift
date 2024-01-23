@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         return alertView
     }()
     
+    @IBOutlet weak var historyButton: UIButton!
     
     
     @IBAction func buttonPrassed(_ sender: UIButton) {
@@ -136,6 +137,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         defaultTextLabel()
+        historyButton.accessibilityIdentifier = "historyButton"
         
         calculations = calculationHistoryStorage.loadHistory()
         view.addSubview(alertView)
