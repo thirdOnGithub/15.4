@@ -2,7 +2,7 @@
 //  TinkoffCalculatorUITestsLaunchTests.swift
 //  TinkoffCalculatorUITests
 //
-//  Created by Илья on 21/01/24.
+//  Created by Булат Камалетдинов on 29.01.2024.
 //
 
 import XCTest

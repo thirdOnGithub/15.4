@@ -2,24 +2,23 @@
 //  ViewController.swift
 //  TinkoffCalculator
 //
-//  Created by Илья on 21/01/24.
+//  Created by Булат Камалетдинов on 29.01.2024.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    
-
-    @IBOutlet weak var labelText: UILabel!
-    var calculations:[Calculation] = []
     let calculationHistoryStorage = CalculationHistoryStorage()
+    var calculations:[Calculation] = []
+    @IBOutlet weak var labelText: UILabel!
+    
     private let alertView: AlertView = {
         let screenBounds = UIScreen.main.bounds
         let alertHeight: CGFloat = 100
         let alertWight = screenBounds.width - 40
-        let x:CGFloat = screenBounds.width/2 - alertWight/2
-        let y:CGFloat = screenBounds.height/2 - alertHeight/2
+        let x:CGFloat = screenBounds.width / 2 - alertWight / 2
+        let y:CGFloat = screenBounds.height / 2 - alertHeight / 2
         let alertFrame = CGRect(x: x, y: y, width: alertWight, height: alertHeight)
         let alertView = AlertView(frame: alertFrame)
         return alertView
@@ -44,8 +43,6 @@ class ViewController: UIViewController {
         }
         
         sender.animateTap()
-        
-        
     }
     
     @IBAction func operationButtonPrassed(_ sender: UIButton) {
@@ -56,9 +53,7 @@ class ViewController: UIViewController {
               let number = numberFormater.number(from: labeltext)?.doubleValue
               else {return}
         
-//        labelText.text = buttonText
-        
-        calculationHistory.append(.numeber(number))
+        calculationHistory.append(.number(number))
         calculationHistory.append(.operation(buttonOperation))
         
         defaultTextLabel()
@@ -67,10 +62,10 @@ class ViewController: UIViewController {
     @IBAction func buttonResult(_ sender: UIButton) {
         guard let labeltext = labelText.text,
               let number = numberFormater.number(from: labeltext)?.doubleValue
-              else {return}
+              else { return }
         
         do {
-            calculationHistory.append(.numeber(number))
+            calculationHistory.append(.number(number))
             let result = try calculate()
             labelText.text = numberFormater.string(from: NSNumber(value: result))
             let newCalculation = Calculation(expression: calculationHistory, result: result)
@@ -96,7 +91,7 @@ class ViewController: UIViewController {
         case devide = "/"
         
         
-        func calculate(_ a: Double, _ b: Double) throws -> Double{
+        func calculate(_ a: Double, _ b: Double) throws -> Double {
             switch self{
             case .add:
                 return a + b
@@ -104,23 +99,22 @@ class ViewController: UIViewController {
                 return a - b
             case .devide:
                 if b == 0 { throw CalculationError.devideByZero}
-                return a/b
+                return a / b
             case .multiply:
-                return a*b
+                return a * b
             }
         }
         
     }
     
-    enum CalculationItem: Codable{
-        case numeber(Double)
+    enum CalculationItem: Codable {
+        case number(Double)
         case operation(Operation)
     }
     
     
-    enum CalculationError: Error{
+    enum CalculationError: Error {
         case devideByZero
-        
     }
     
     
@@ -135,14 +129,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         defaultTextLabel()
         historyButton.accessibilityIdentifier = "historyButton"
         
         calculations = calculationHistoryStorage.loadHistory()
         view.addSubview(alertView)
         alertView.alpha = 0
-        alertView.alertText = "Вы нашли пасхалку!"
+        alertView.alertText = "Число Pi!"
         view.subviews.forEach {
             if type(of: $0)  == UIButton.self {
                 $0.layer.cornerRadius = 0
@@ -153,14 +147,14 @@ class ViewController: UIViewController {
     
     
     func calculate() throws  ->  Double {
-        guard case CalculationItem.numeber(let firstNumber) = calculationHistory[0] else {return 0}
+        guard case CalculationItem.number(let firstNumber) = calculationHistory[0] else {return 0}
         
         var currentResult = firstNumber
          
         for index in stride(from: 1, through: calculationHistory.count - 1 , by: 2){
             guard
                 case .operation(let operation) = calculationHistory[index],
-                case .numeber(let number) = calculationHistory[index + 1]
+                case .number(let number) = calculationHistory[index + 1]
             else{break}
             
             
@@ -174,23 +168,6 @@ class ViewController: UIViewController {
         labelText.text = "0"
     }
     
-    
-// Навигация
-//    Сегвеии
-//    @IBAction func unwindAction (inwindSeque: UIStoryboardSegue){
-//        
-//    }
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "CALCULATION_LIST",
-//              let calculationListVC = segue.destination as? CalculationListViewController else {return}
-//        calculationListVC.result  = labelText.text
-//    }
-    
-    
-//    Навигация через код
-    
-     
     @IBAction func showCalculateList(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let calculateLicVC = sb.instantiateViewController(withIdentifier: "CalculationListController")
@@ -217,7 +194,7 @@ class ViewController: UIViewController {
 }
 
 extension UILabel {
-    func shake(){
+    func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.5
         animation.repeatCount = 5
@@ -231,7 +208,7 @@ extension UILabel {
 
 
 extension UIButton {
-    func animateTap(){
+    func animateTap() {
         let scaleAnimation  = CAKeyframeAnimation(keyPath: "tranform.scale")
         scaleAnimation.values = [1,0.9,1]
         scaleAnimation.keyTimes = [0,0.2,1]
